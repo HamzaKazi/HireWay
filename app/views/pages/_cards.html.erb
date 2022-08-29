@@ -1,0 +1,12 @@
+<section class="Home__cards">
+  <div class="container">
+    <h2 class="Home__cards-heading">Recently Added Boats</h2>
+    <div class="row">
+      <% @boats.each do |boat| %>
+        <div class="col-sm-6 col-md-4">
+          <%= render 'shared/card', boat: boat %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
