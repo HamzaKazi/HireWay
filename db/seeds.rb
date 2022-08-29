@@ -9,17 +9,20 @@ require "open-uri"
 require "json"
 
 puts "Cleaning up database..."
-User.destroy_all
 Vehicle.destroy_all
+User.destroy_all
 puts "Database cleaned"
 
-User.create(name: "Marcus")
+user = User.create(email: "Marcus@gmail.com", password: "123456")
+puts "user #{user.id}"
 
-Vehicle.create(
-  type: "BMW",
+ bmw = Vehicle.create(
+  name: "BMW",
   description: "M5 SPORT",
-  category: "car"
+  category: "Car",
+  user_id: user.id
 )
+puts "vehicle #{bmw.name} id #{bmw.id}"
 
 puts "User created"
 puts "Vehicle created"
