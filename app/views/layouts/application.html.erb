@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <%= render "shared/navbar" %>
     <title>HireWay</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
@@ -11,6 +12,7 @@
   </head>
 
   <body>
+  <%= render "shared/flashes" %>
     <%= yield %>
   </body>
 </html>
