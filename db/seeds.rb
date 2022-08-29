@@ -18,7 +18,7 @@ User.create(name: "Marcus")
 Vehicle.create(
   type: "BMW",
   description: "M5 SPORT",
-  category: "car",
+  category: "car"
 )
 
 puts "User created"
