@@ -1,10 +1,10 @@
 <section class="Home__cards">
   <div class="container">
-    <h2 class="Home__cards-heading">Recently Added Boats</h2>
+    <h2 class="Home__cards-heading">All Vehicles</h2>
     <div class="row">
-      <% @boats.each do |boat| %>
+      <% @vehicles.each do |vehicle| %>
         <div class="col-sm-6 col-md-4">
-          <%= render 'shared/card', boat: boat %>
+          <%= render 'shared/card', vehicle: vehicle %>
         </div>
       <% end %>
     </div>
