@@ -42,6 +42,4 @@ before_action :set_list, only: [:show, :destroy]
     #TODO
 		params.require(:vehicle).permit(:type, :description, :category)
   end
->>>>>>> 8492cd2e079dcbc43b18900b3a7730038355f647
-
 end
