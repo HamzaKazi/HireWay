@@ -1,4 +1,4 @@
-<h2>Sign up</h2>
+<p class="fs-2">Sign up</p>
 
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),
@@ -19,7 +19,8 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <%= f.submit 'Sign up', :class=> "btn btn-primary" %>
+
   </div>
 <% end %>
 
