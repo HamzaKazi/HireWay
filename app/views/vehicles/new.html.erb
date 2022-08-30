@@ -1,0 +1,44 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Create your vehicle listing
+  </div>
+  <div class="panel-body">
+    <div class="container">
+
+      <%= form_for @vehicle do |f| %>
+
+        <div class="row">
+
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label>Vehicle Type</label>
+              <%= f.select :type, [["Ferrari"], ["BMW"], ["Mercedes"]],
+                            id: "type", prompt: "Select...", class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label>Vehicle Description</label>
+              <%= f.select :description, [["Entire", "Entire"], ["Private", "Private"], ["Shared", "Shared"]],
+                            id: "room_type", prompt: "Select...", class: "form-control" %>
+            </div>
+          </div>
+
+          <div class="col-md-4 select">
+            <div class="form-group">
+              <label>Vehicle Category</label>
+              <%= f.select :category, [["car"], ["aircraft"], ["yacht"], ["limousine"]],
+                            id: "category", prompt: "Select...", class: "form-control" %>
+            </div>
+          </div>
+
+        </div>
+
+        <div><%= f.submit "Create My Room", class: "btn btn-normal" %></div>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>
