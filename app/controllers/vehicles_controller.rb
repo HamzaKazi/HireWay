@@ -1,10 +1,15 @@
 class VehiclesController < ApplicationController
+<<<<<<< HEAD
+=======
 before_action :set_list, only: [:show, :destroy]
 
+>>>>>>> 8492cd2e079dcbc43b18900b3a7730038355f647
   def index
     @vehicles = Vehicle.all
   end
 
+<<<<<<< HEAD
+=======
   def show
     @booking = Booking.new
   end
@@ -37,5 +42,4 @@ before_action :set_list, only: [:show, :destroy]
     #TODO
 		params.require(:vehicle).permit(:type, :description, :category)
   end
-
 end
