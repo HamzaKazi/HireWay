@@ -18,6 +18,7 @@
   <div class="container">
     <div class="row">
         <% @vehicles.each do |vehicle| %>
+        <% if vehicle.category == "Car" then%>
            <div class="col">
           <%= link_to  vehicle_path(vehicle) do %>
               <div class="card">
@@ -30,6 +31,7 @@
                   <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
                 </div>
               </div>
+          <% end %>
           <% end %>
            </div>
         <% end %>

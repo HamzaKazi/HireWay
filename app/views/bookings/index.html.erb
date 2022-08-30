@@ -2,10 +2,12 @@
 <div class="text-center padded">
 <p class="fs-2">All my reservations</p>
 </div>
-
+<%# <a <%= link_to  vehicle_path(booking.vehicle)%> class="btn btn-outline-success btn-sm">Read More</a> %>
 <div class="wrapper-dashboard">
     <% @bookings.each do |booking| %>
           <aside class="profile-card">
+
+      <a class="btn btn-outline-success btn-sm">View Booking <%= link_to  booking_path(booking) do %> %>
             <header>
               <a target="_blank" href="#">
                 <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80" class="hoverZoomLink">
@@ -20,12 +22,11 @@
                     </h2>
             </header>
 
-          <!-- bit of a bio; who are you? -->
               <div class="profile-bio">
                 <p> <%= booking.vehicle.description %> </p>
               </div>
-
                 <i class="fa fa-behance"></i>
         </aside>
+    <% end %>
     <% end %>
 </div>
