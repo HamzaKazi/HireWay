@@ -1,12 +1,62 @@
-<section class="Home__cards">
+<%# <section class="Card">
   <div class="container">
-    <h2 class="Home__cards-heading">All Vehicles</h2>
+    <h2 class="card-heading">All Vehicles</h2>
     <div class="row">
       <% @vehicles.each do |vehicle| %>
-        <div class="col-sm-6 col-md-4">
+        <%# <div class="col-sm-6 col-md-4">
           <%= render 'shared/card', vehicle: vehicle %>
-        </div>
+        <%# </div>
       <% end %>
-    </div>
+    <%# </div>
   </div>
-</section>
+</section> %>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cards</title>
+    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
+    <!-- We need this line below for responsiveness! -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="app/assets/stylesheets/components/_card.scss">
+  </head>
+  <body>
+            <!-- Page Content-->
+            <div class="container px-4 px-lg-5">
+              <!-- Heading Row-->
+              <div class="row gx-4 gx-lg-5 align-items-center my-5">
+                  <div class="col-lg-7"><img class="img-fluid rounded mb-4 mb-lg-0" src="https://dummyimage.com/900x400/dee2e6/6c757d.jpg" alt="..." /></div>
+                  <div class="col-lg-5">
+                      <h1 class="font-weight-light">Business Name or Tagline</h1>
+                      <p>This is a template that is great for small businesses. It doesn't have too much fancy flare to it, but it makes a great use of the standard Bootstrap core components. Feel free to use this template for any project you want!</p>
+                      <a class="btn btn-primary" href="#!">Call to Action!</a>
+                  </div>
+              </div>
+              <!-- Call to Action-->
+              <div class="card text-white bg-secondary my-5 py-4 text-center">
+                  <div class="card-body"><p class="text-white m-0">Have a look at our vehicles, </p></div>
+              </div>
+    <main>
+      <h2>Cafes in Annerley</h2>
+      <section class="card-row">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="exposed brick wall in a hipster cafe">
+          <h3>My local hipster cafe</h3>
+          <p>My local cafe. I highly recommend a visit to the local hipster cafe, Two Slopes. Even though over 50's aren't the target demographic of this exposed-brick wonderland, the excellent coffee, friendly staff, and quiet, laid-back music, make it an excellent choice.</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="exposed brick wall in a hipster cafe">
+          <h3>A good choice of cafe</h3>
+          <p>A good choice of cafe. I highly recommend a visit to the local hipster cafe, Two Slopes. You can find this cafe on the corner of Short St and Cracknell St. They have a book exchange in the corner of the shop which you can use</p>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1463797221720-6b07e6426c24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="exposed brick wall in a hipster cafe">
+          <h3>Another great cafe</h3>
+          <p>Another cafe. I highly recommend a visit to the resident Annerley hipster cafe, Two Slopes. They also take tea very seriously, with a wide range of teas imported from China served in a generous teapot.</p>
+        </article>
+      </section>
+
+
+    </main>
+  </body>
+</html>
