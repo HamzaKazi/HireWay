@@ -152,19 +152,18 @@
   text-align: left;
 }
 
-h1 {
-  font-size: 75px;
-  font-weight: 25px;
-  font-family: 'Lora', serif;
-
-}
-
 h2 {
   font-weight: bold;
   font-size: 12rem;
 }
 
 .mb-0 {
+  font-family: 'Lora', serif;
+
+}
+
+h1, .h1 {
+  font-size: 75px;
   font-family: 'Lora', serif;
 
 }
