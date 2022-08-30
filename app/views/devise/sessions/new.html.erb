@@ -1,7 +1,7 @@
-<h2>Log in</h2>
 
+<p class="fs-2">Login to your account</p>
 <%# <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name),
-  data: {turbo: false}) do |f| %> %>
+  data: {turbo: false}) do |f| %>
 
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), data: {turbo: false}) do |f| %>
   <div class="form-inputs">
@@ -16,7 +16,7 @@
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+<%= f.submit 'Login', :class=> "btn btn-primary" %>
   </div>
 <% end %>
 
