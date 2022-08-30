@@ -10,61 +10,29 @@
     <%# </div>
   </div>
 </section> %>
-
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Cards</title>
-    <link rel="shortcut icon" href="data:image/x-icon;" type="image/x-icon">
-    <!-- We need this line below for responsiveness! -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="app/assets/stylesheets/application.scss">
-  </head>
-  <body>
-   <section id="header" class="jumbotron text-center">
+<section id="header" class="jumbotron text-center">
      <h1 class="display-3">Luxury Cars</h1>
      <p class="lead">Discover luxury cars below and hire the car of your dreams.</p>
 </section>
-
 <section id="gallery">
   <div class="container">
     <div class="row">
-    <div class="col-lg-4 mb-4">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Lambourgini</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-      </div>
-     </div>
-    </div>
-  <div class="col-lg-4 mb-4">
-  <div class="card">
-      <img src="https://images.unsplash.com/photo-1516214104703-d870798883c5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">BMW</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-      </div>
-      </div>
-    </div>
-    <div class="col-lg-4 mb-4">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="" class="card-img-top">
-      <div class="card-body">
-        <h5 class="card-title">Ferrari</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut eum similique repellat a laborum, rerum voluptates ipsam eos quo tempore iusto dolore modi dolorum in pariatur. Incidunt repellendus praesentium quae!</p>
-       <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
-      </div>
-     </div>
+        <% @vehicles.each do |vehicle| %>
+           <div class="col">
+          <%= link_to  vehicle_path(vehicle) do %>
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80" alt="" class="mx-auto d-block" style="width: 400px; height: 450px;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
+                  <p class="card-text"><%= vehicle.description %></p>
+                  <p>$<%= vehicle.price%></p>
+                  <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+                  <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+                </div>
+              </div>
+          <% end %>
+           </div>
+        <% end %>
     </div>
   </div>
-</div>
 </section>
-
-  </body>
-</html>
