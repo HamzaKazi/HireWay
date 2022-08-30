@@ -1,47 +1,55 @@
 class BookingsController < ApplicationController
-  def new
-    @booking = Booking.new
-    authorize @booking
-  end
+
 
   def create
+    @vehicle = Vehicle.find(params[:vehicle_id])
     @booking = Booking.new(booking_params)
+    @booking.vehicle = @vehicle
     @booking.user = current_user
-    @booking.location = @location
-    authorize @booking
-    if @booking.save
-      redirect_to bookings_path
+    @booking.status = "Pending host validation"
+    if @booking.checkout_on && @booking.checkin_on
+      @booking.value = (@booking.checkout_on - @booking.checkin_on).to_f * @booking.vehicle.price.to_f
     else
-      render 'new'
+      @booking.value = 0
+    end
+    if @booking.save
+      redirect_to booking_path(@booking)
+    else
+      redirect_to vehicle_path(@vehicle)
     end
   end
 
   def index
-    @bookings = policy_scope(Booking)
+    @bookings = Booking.where(user_id: current_user.id)
+    # @review = Review.new
+  end
 
-    @bookings_as_owner = current_user.bookings_as_owner
-    @bookings_as_renter = current_user.bookings - @bookings_as_owner
+  def show
+    set_booking
+    @vehicle = @booking.vehicle
   end
 
   def update
-    authorize @booking
-    if @booking.update(booking_params)
-      redirect_to bookings_path
-    end
+    set_booking
+    @booking.status = "Pending host validation"
+    @booking.save!
+    redirect_to booking_path(@booking)
+  end
+
+  def destroy
+    set_booking
+    @booking.destroy
+    redirect_to root_path
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :status)
+    params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
   end
 
   def set_booking
     @booking = Booking.find(params[:id])
   end
 
-  def set_location
-    @location = Location.find(params[:location_id])
-  end
-end
 end
