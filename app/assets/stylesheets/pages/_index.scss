@@ -26,9 +26,9 @@ p {
   background: #FFB300;
   width: 56px;
   height: 56px;
-  position: absolute;
-  left: 13%;
-  top: 50%;
+  // position: absolute;
+  // left: 13%;
+  // top: 50%;
   z-index: 2;
   overflow: hidden;
   opacity: 0;
@@ -60,7 +60,7 @@ p {
 }
 
 .profile-card header h1 {
-  color: #49639d;
+  color: #9d5c49;
 }
 
 .profile-card header a {
@@ -70,6 +70,12 @@ p {
   margin: 25px 30px;
 }
 
+.wrapper-dashboard {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 350px;
+  margin-left: 250px;
+}
 
 
 .profile-card header a > img {

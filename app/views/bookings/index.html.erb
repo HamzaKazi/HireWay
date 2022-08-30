@@ -4,69 +4,28 @@
 </div>
 
 <div class="wrapper-dashboard">
-  <ul class="list-unstyled">
-
     <% @bookings.each do |booking| %>
-        <li class="dashboard">
-          <div class='product-body'>
-            <h2><%= booking.vehicle.name %></h2>
-            <p>Name: <strong><%= booking.vehicle.name %></strong></p>
-            <p>Description: <strong><%= booking.vehicle.description %></strong></p>
-            <p>Category: <strong><%= booking.vehicle.category %></strong></p>
-          </div>
           <aside class="profile-card">
-  <header>
-    <!-- here’s the avatar -->
-    <a target="_blank" href="#">
-      <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80" class="hoverZoomLink">
-    </a>
+            <header>
+              <a target="_blank" href="#">
+                <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80" class="hoverZoomLink">
+              </a>
 
-    <!-- the username -->
-    <h1>
-           <strong><%= booking.vehicle.name %></strong></p>
-          </h1>
+              <h1>
+                    <strong><%= booking.vehicle.name %></strong></p>
+                    </h1>
 
-    <!-- and role or location -->
-    <h2>
-   <p>Category: <strong><%= booking.vehicle.category %></strong></p>
-          </h2>
+              <h2>
+              <p>Category: <strong><%= booking.vehicle.category %></strong></p>
+                    </h2>
+            </header>
 
-  </header>
+          <!-- bit of a bio; who are you? -->
+              <div class="profile-bio">
+                <p> <%= booking.vehicle.description %> </p>
+              </div>
 
-  <!-- bit of a bio; who are you? -->
-  <div class="profile-bio">
-
-    <p>
-  <%= booking.vehicle.description %>
-    </p>
-
-  </div>
-
-  <!-- some social links to show off -->
-  <ul class="profile-social-links">
-    <li>
-      <a target="_blank" href="https://www.facebook.com/creativedonut">
-        <i class="fa fa-facebook"></i>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://twitter.com/dropyourbass">
-        <i class="fa fa-twitter"></i>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://github.com/vipulsaxena">
-        <i class="fa fa-github"></i>
-      </a>
-    </li>
-    <li>
-      <a target="_blank" href="https://www.behance.net/vipulsaxena">
-
-        <i class="fa fa-behance"></i>
-      </a>
-    </li>
-  </ul>
-</aside>
+                <i class="fa fa-behance"></i>
+        </aside>
     <% end %>
-  </ul>
 </div>

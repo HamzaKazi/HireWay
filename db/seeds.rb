@@ -79,7 +79,7 @@ bmw = Vehicle.create(
   name: "My Way",
   description: "Whether you prefer the Frank Sinatra original or the Sex Pistols cover, there is no denying the cultural impact of this classic tune.",
   category: "Yacht",
-  user_id: user.id,
+  user_id: 2,
   price: 425
 )
 bmw = Vehicle.create(
@@ -97,20 +97,20 @@ bmw = Vehicle.create(
   price: 150
 )
 
-booking = Booking.create(
+booking = Booking.create!(
   date: 10102022,
   user_id: user.id,
-  vehicle_id: 23,
+  vehicle_id: Vehicle.last.id,
 )
-booking = Booking.create(
+booking = Booking.create!(
   date: 12092022,
-  user_id: user.id,
-  vehicle_id: 4,
+  user_id: User.last.id,
+  vehicle_id: Vehicle.last.id,
 )
-booking = Booking.create(
+booking = Booking.create!(
   date: 11062022,
-  user_id: user.id,
-  vehicle_id: 2,
+  user_id: User.last.id,
+  vehicle_id: Vehicle.last.id,
 )
 
 
