@@ -9,18 +9,14 @@
   <ul class="list-unstyled">
 
     <% @bookings.each do |booking| %>
-      <% if booking.checkin_on > Date.today %>
-        <% if booking.status == "Pending host validation" %>
         <li class="dashboard">
         <%= cl_image_tag(booking.vehicle.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
           <div class='product-body'>
             <h2><%= booking.vehicle.name %></h2>
             <p>Name: <strong><%= booking.vehicle.name %></strong></p>
             <p>Description: <strong><%= booking.vehicle.description %></strong></p>
-            <p>Category: <strong><%= booking.category %> €</strong></p>
+            <p>Category: <strong><%= booking.vehicle.category %> €</strong></p>
           </div>
-          <% end %>
-      <% end %>
     <% end %>
   </ul>
 </div>

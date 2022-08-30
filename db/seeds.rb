@@ -11,8 +11,9 @@ require "json"
 puts "Cleaning up database..."
 Vehicle.destroy_all
 User.destroy_all
-puts "Database cleaned"
 
+puts "Database cleaned"
+booking = Booking.create(date: 10112022)
 user = User.create(email: "Marcus@gmail.com", password: "123456")
 puts "user #{user.id}"
 
