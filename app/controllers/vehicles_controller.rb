@@ -15,6 +15,7 @@ before_action :set_list, only: [:show, :destroy]
 
   def create
     @vehicle = Vehicle.new(vehicle_params)
+    @vehicle.user = current_user
     if @vehicle.save
       redirect_to vehicle_path(@vehicle)
     else
@@ -35,6 +36,6 @@ before_action :set_list, only: [:show, :destroy]
 
   def vehicle_params
     #TODO
-		params.require(:vehicle).permit(:type, :description, :category)
+		params.require(:vehicle).permit(:name, :description, :category, :price)
   end
 end
