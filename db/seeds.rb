@@ -9,9 +9,9 @@ require "open-uri"
 require "json"
 
 puts "Cleaning up database..."
+Booking.destroy_all
 Vehicle.destroy_all
 User.destroy_all
-
 puts "Database cleaned"
 booking = Booking.create(date: 10112022)
 user = User.create(email: "Marcus@gmail.com", password: "123456")
@@ -97,7 +97,22 @@ bmw = Vehicle.create(
   price: 150
 )
 
-puts "vehicle #{bmw.name} id #{bmw.id}"
+booking = Booking.create(
+  date: 10102022,
+  user_id: user.id,
+  vehicle_id: 23,
+)
+booking = Booking.create(
+  date: 12092022,
+  user_id: user.id,
+  vehicle_id: 4,
+)
+booking = Booking.create(
+  date: 11062022,
+  user_id: user.id,
+  vehicle_id: 2,
+)
+
 
 puts "User created"
 puts "Vehicle created"
