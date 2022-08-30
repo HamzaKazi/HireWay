@@ -1,49 +1,57 @@
-<div class="container">
-  <div class="row">
-    <div class="text-center">
-      <% if @booking.status == "Pending host validation"%>
-      <h3>  <strong><i class="fa fa-star" aria-hidden="true"></i> We are waiting for <%= @booking.vehicle.user.first_name %> to confirm your request </strong> <i class="fa fa-star" aria-hidden="true"></i></h3>
-      <h3> So... stay tuned! </h3>
-      <% end %>
-      <hr>
+<div class="map" style="background-image: url('<%= @vehicle.picture_url %>')"></div>
 
-        <div class="row">
-          <div class="col-md-6">
-            <%= cl_image_tag @booking.vehicle.user.photo.path, width: 150, height: 150, crop: :thumb, class: "avatar-xlarge" %>
+<div class="container margin-top-negative">
+  <div class="row">
+    <div class="col-8">
+      <div class="vehicle-show-card">
+        <h1><%= @vehicle.name %></h1>
+        <p class="vehicle-show-address"><%= @vehicle.address %></p>
+      </div>
+      <div class="vehicle-show-card">
+        <h3>A bit more about this vehicle...</h3>
+        <p><%= @vehicle.description %></p>
+        <div class="map" style="background-image: url('https://maps.googleapis.com/maps/api/staticmap?center=<%= @vehicle.address %>&zoom=13&scale=2&size=1000x1000&maptype=roadmap&markers=color:red%7C<%= @vehicle.address %>&key=AIzaSyAPpx0wk4d-AQ8bhe8-a-ihC7NXLoPElhg')"></div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="vehicle-show-card">
+        <h5>Book this place!</h5>
+
+        <form action="">
+          <div class="input-group">
+            <span class="input-group-text" id="start-date-label">From:</span>
+            <input type="text" class="form-control" placeholder="12/10/2017" aria-label="start-date" aria-describedby="start-date-label">
           </div>
-          <div class="col-md-6">
-              <div class="text-left">
-              <h4> Reminder of your <strong id="red-word">booking details</strong></h4>
-              <br>
-                <table>
-                 <tbody>
-                    <tr>
-                      <td> <h4><i class="fa fa-heart" aria-hidden="true"></i> </h4></td>
-                      <td><h4> &nbsp; Your host is <strong> <%= @booking.vehicle.user.first_name %> </strong></h4></td>
-                    </tr>
-                    <tr>
-                      <td><h4> <i class="fa fa-vehicle" aria-hidden="true"></i></h4></td>
-                      <td><h4> &nbsp; You asked to join a warm vehicle from : <br>  &nbsp;   <%= @booking.checkin_on %> to <%= @booking.checkout_on %> </h4></td>
-                    </tr>
-                    <tr>
-                      <td><h4> <i class="fa fa-thumbs-up" aria-hidden="true"></i></h4></td>
-                      <td><h4> &nbsp; The total price for your booking is <%= @booking.value %> €</h4></td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+          <div class="input-group mt-2">
+            <span class="input-group-text" id="end-date-label">To:</span>
+            <input type="text" class="form-control" placeholder="18/10/2017" aria-label="end-date" aria-describedby="start-date-label">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+      </div>
+      <div class="vehicle-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+            <%= @vehicle.number_of_guests %> people
+          </div>
+          <div class="flex ms-3">
+            <%= @vehicle.price_per_night %>€
           </div>
         </div>
+      </div>
+      <div class="vehicle-show-card">
+        <div class="flex-align">
+          <h6 class="no-mb">Share</h6>
 
-
-      <% if @booking.status == "Pending guest request"%>
-      <%= simple_form_for(@booking) do |f| %>
-      <%= f.submit "Confirm my booking", class: "btn btn-danger btn-lg" %>
-      <% end %>
-      <% end %>
-      <hr>
-    <%= link_to "See my next stays", bookings_path, class:"btn btn-default btn-lg " %>
+          <div class="flex">
+            <i class="fa-brands fa-facebook-square me-2"></i>
+            <i class="fa-brands fa-twitter-square me-2"></i>
+            <i class="fa-brands fa-pinterest-square me-2"></i>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </div>
