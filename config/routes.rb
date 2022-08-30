@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   end
   resources :vehicles, only: :destroy
   resources :bookings, only: [:destroy, :index]
+  resources :beds, only: [:index, :new, :show]
 end

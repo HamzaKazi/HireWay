@@ -12,11 +12,11 @@
       <% if booking.checkin_on > Date.today %>
         <% if booking.status == "Pending host validation" %>
         <li class="dashboard">
-        <%= cl_image_tag(booking.bed.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
+        <%= cl_image_tag(booking.vehicle.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
           <div class='product-body'>
-            <h2><%= booking.bed.title %></h2>
-            <p>City: <strong><%= booking.bed.city %></strong></p>
-            <p>Address: <strong><%= booking.bed.address %></strong></p>
+            <h2><%= booking.vehicle.title %></h2>
+            <p>City: <strong><%= booking.vehicle.city %></strong></p>
+            <p>Address: <strong><%= booking.vehicle.address %></strong></p>
             <p>Total price: <strong><%= booking.value %> €</strong></p>
           </div>
           <div>
@@ -29,11 +29,11 @@
         <% end %>
       <% if booking.status == "Confirmed" %>
       <li class="dashboard">
-      <%= cl_image_tag(booking.bed.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
+      <%= cl_image_tag(booking.vehicle.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
       <div class='product-body'>
-        <h2><%= booking.bed.title %></h2>
-        <p>City: <strong><%= booking.bed.city %></strong></p>
-        <p>Address: <strong><%= booking.bed.address %></strong></p>
+        <h2><%= booking.vehicle.title %></h2>
+        <p>City: <strong><%= booking.vehicle.city %></strong></p>
+        <p>Address: <strong><%= booking.vehicle.address %></strong></p>
         <p>Total price: <strong><%= booking.value %> €</strong></p>
       </div>
       <div>
@@ -46,16 +46,16 @@
       <% end %>
       <% if booking.status == "Canceled" %>
       <li class="dashboard">
-      <%= cl_image_tag(booking.bed.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
+      <%= cl_image_tag(booking.vehicle.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
       <div class='product-body'>
-        <h2><%= booking.bed.title %></h2>
-        <p>City: <strong><%= booking.bed.city %></strong></p>
-        <p>Address: <strong><%= booking.bed.address %></strong></p>
+        <h2><%= booking.vehicle.title %></h2>
+        <p>City: <strong><%= booking.vehicle.city %></strong></p>
+        <p>Address: <strong><%= booking.vehicle.address %></strong></p>
         <p>Total price: <strong><%= booking.value %> €</strong></p>
       </div>
       <div>
         <ul class="list-unstyled hidden-sm hidden-xs padded">
-          <li><p><%= booking.bed.user.first_name%> canceled your booking </p></li>
+          <li><p><%= booking.vehicle.user.first_name%> canceled your booking </p></li>
         </ul>
       </div>
       </li>
@@ -77,11 +77,11 @@
       <% if booking.checkin_on <= Date.today %>
       <% if booking.status == "Confirmed" %>
      <li class="dashboard">
-      <%= cl_image_tag(booking.bed.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
+      <%= cl_image_tag(booking.vehicle.photo.path, width: 400, height: 300, crop: :fill, class: "pdt-image hidden-xs" ) %>
       <div class='product-body'>
-        <h2><%= booking.bed.title %></h2>
-        <p>City: <strong><%= booking.bed.city %></strong></p>
-        <p>Address: <strong><%= booking.bed.address %></strong></p>
+        <h2><%= booking.vehicle.title %></h2>
+        <p>City: <strong><%= booking.vehicle.city %></strong></p>
+        <p>Address: <strong><%= booking.vehicle.address %></strong></p>
         <p>Total price: <strong><%= booking.value %> €</strong></p>
       </div>
       <div>
