@@ -21,35 +21,37 @@ puts "user #{user.id}"
 
  bmw = Vehicle.create(
   name: "BMW",
-  description: "M5 SPORT",
+  description: "M5 SPORT,  The BMW M TwinPower Turbo 8-cylinder petrol engine of the BMW M5 Competition is the most powerful motor that BMW M has ever developed for a series production vehicle. The 4.4-litre power unit delivers 625hp, 750 Nm of torque, and goes from 0 to 62mh in a mere 3.3 seconds.",
   category: "Car",
   user_id: user.id,
   price: 30
 )
 bmw = Vehicle.create(
   name: "Rolls Royce",
-  description: "Ghost",
+  description: "The Rolls-Royce Ghost is a full-sized luxury car manufactured by Rolls-Royce Motor Cars. The 'Ghost' nameplate, named in honour of the Silver Ghost, a car first produced in 1906, was announced in April 2009 at the Auto Shanghai show. The production model was officially unveiled at the 2009 Frankfurt Motor Show.",
   category: "Car",
   user_id: user.id,
   price: 100
 )
 bmw = Vehicle.create(
   name: "Ferrari",
-  description: "La Ferrari",
+  description: "La Ferrari,
+  LaFerrari is the first full hybrid produced by the Italian automotive marque, providing the highest power output of any Ferrari road car whilst decreasing fuel consumption by 40 percent.",
   category: "Car",
   user_id: user.id,
   price: 70
 )
 bmw = Vehicle.create(
   name: "Lambourghini",
-  description: "Aventador",
+  description: "Aventador,
+  The Lamborghini car has the reputation of being one of the fastest cars to grace the motor racing world, with the Aventador achieving the Lamborghini top speed of 349 kmph. Lamborghini India imports the cars and sells them off the shelf. The Lamborghini starting price in India is upwards of INR 3 Crores.",
   category: "Car",
   user_id: user.id,
   price: 70
 )
 bmw = Vehicle.create(
   name: "Bentley",
-  description: "Bentayga",
+  description: "Bentayga, The Bentley Bentayga is a mid-size luxury crossover SUV marketed by Bentley since late 2015. It is the second SUV, and the first in large numbers, to be produced by the brand.",
   category: "Car",
   user_id: user.id,
   price: 50
