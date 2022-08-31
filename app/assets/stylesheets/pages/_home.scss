@@ -43,9 +43,9 @@
 }
 
 .lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-  font-family: 'Lora', serif;
+  font-size: 1.45rem;
+  font-weight: 200;
+  font-family: Garamond, serif;
 
 }
 
@@ -152,13 +152,6 @@
   text-align: left;
 }
 
-h1 {
-  font-size: 75px;
-  font-weight: 25px;
-  font-family: 'Lora', serif;
-
-}
-
 h2 {
   font-weight: bold;
   font-size: 12rem;
@@ -167,4 +160,10 @@ h2 {
 .mb-0 {
   font-family: 'Lora', serif;
 
+}
+
+h1, .h1 {
+  font-size: 75px;
+  font-family: Garamond, serif;
+  font-weight:  lighter;
 }

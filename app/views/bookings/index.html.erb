@@ -1,8 +1,7 @@
 
 <div class="text-center padded">
-<p class="fs-2">All my reservations</p>
+<h1>All my reservations</h1>
 </div>
-<%# <a <%= link_to  vehicle_path(booking.vehicle)%> class="btn btn-outline-success btn-sm">Read More</a> %>
 <div class="wrapper-dashboard">
     <% @bookings.each do |booking| %>
           <aside class="profile-card">
@@ -12,9 +11,9 @@
                 <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80" class="hoverZoomLink">
               </a>
 
-              <h1>
+              <h4>
                     <strong><%= booking.vehicle.name %></strong></p>
-                    </h1>
+                    </h4>
 
               <h2>
               <p>Category: <strong><%= booking.vehicle.category %></strong></p>
