@@ -18,7 +18,8 @@
                             <input class="" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
                             </button>
                             <%= simple_form_for [@vehicle, @booking] do |f| %>
-                         <strong>     <%= f.input :date, label: "Enter number of hours you would like to hire"%></strong>
+                         <strong><%= f.input :hours, label: "Enter number of hours you would like to hire"%></strong>
+                         <strong><%= f.input :date, as: :date, label: "Enter the date"%></strong>
                               <%= f.button :submit, "Submit", class: "btn btn-danger btn-lg"%>
                             <% end %>
                         </div>
