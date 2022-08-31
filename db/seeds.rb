@@ -25,7 +25,7 @@ puts "user #{user.id}"
   category: "Car",
   user_id: user.id,
   price: 30,
-  image: "https://images.unsplash.com/photo-1614200179396-2bdb77ebf81b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bHV4dXJ5JTIwY2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"
+  image: "https://sites.lsa.umich.edu/mje/wp-content/uploads/sites/909/2022/01/Ferrari-700x467.jpg"
 )
 bmw = Vehicle.create(
   name: "Rolls Royce",
@@ -33,7 +33,7 @@ bmw = Vehicle.create(
   category: "Car",
   user_id: user.id,
   price: 100,
-  image: "https://images.unsplash.com/photo-1519245659620-e859806a8d3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bHV4dXJ5JTIwY2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60"
+  image: "https://vezess2.p3k.hu/app/uploads/2019/07/65770077_1070267573167207_1202577601495826432_e-700x467.jpg"
 )
 bmw = Vehicle.create(
   name: "Ferrari",
@@ -49,7 +49,7 @@ bmw = Vehicle.create(
   name: "Aurora",
   description: "Northern seas",
   category: "Yacht",
-  image: "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8eWFjaHR8ZW58MHx8MHx8&auto=format&fit=crop&w=700&q=60",
+  image: "https://marvel-b1-cdn.bc0a.com/f00000000235903/www.galatiyachts.com/wp-content/uploads/2018/08/y85-exterior-700x467.jpeg",
   user_id: user.id,
   price: 250
 )
