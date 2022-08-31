@@ -5,6 +5,7 @@ before_action :set_list, only: [:show, :destroy]
     @vehicles = Vehicle.all
   end
 
+
   def show
     @booking = Booking.new
   end
