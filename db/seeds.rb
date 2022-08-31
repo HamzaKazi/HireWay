@@ -41,7 +41,7 @@ bmw = Vehicle.create(
   LaFerrari is the first full hybrid produced by the Italian automotive marque, providing the highest power output of any Ferrari road car whilst decreasing fuel consumption by 40 percent.",
   category: "Car",
   user_id: user.id,
-  image: "https://images.unsplash.com/photo-1519245659620-e859806a8d3b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8bHV4dXJ5JTIwY2FyfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
+  image: "https://media.panamera-life.com/wp-content/uploads/2022/01/14013657/B48FF357-224C-46EC-AC2C-3AA208D94F35-700x467.jpeg",
   price: 70
 )
 
@@ -65,7 +65,7 @@ bmw = Vehicle.create(
   name: "My Way",
   description: "Whether you prefer the Frank Sinatra original or the Sex Pistols cover, there is no denying the cultural impact of this classic tune.",
   category: "Yacht",
-  image: "https://images.unsplash.com/photo-1587230049060-c3de8f7327fa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTR8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
+  image: "https://wp-media-yotlot.s3.amazonaws.com/wp-content/uploads/2019/10/16231034/Featured-Image-Master-V2-1-700x467.jpg",
   user_id: 2,
   price: 425
 )
