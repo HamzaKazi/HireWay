@@ -5,10 +5,9 @@
 <div class="wrapper-dashboard">
     <% @bookings.each do |booking| %>
           <aside class="profile-card">
-
             <header>
               <a target="_blank" href="#">
-                <img src="https://images.unsplash.com/photo-1569263979104-865ab7cd8d13?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1748&q=80" class="hoverZoomLink">
+                <img src=" <%= booking.vehicle.image %> " class="hoverZoomLink">
               </a>
 
               <h4>
@@ -21,10 +20,11 @@
                     <p><%= booking.user.email %></p>
             </header>
 
+         <%= link_to  booking_path(booking.id) do %>
               <div class="profile-bio">
                 <p> <%= booking.vehicle.description %> </p>
               </div>
-                <i class="fa fa-behance"></i>
+      <% end %>
         </aside>
     <% end %>
 </div>

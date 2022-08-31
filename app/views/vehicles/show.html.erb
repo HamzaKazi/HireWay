@@ -4,7 +4,7 @@
             <div class="">
                 <div class="d-flex  mx-4 mt-4">
                     <div class="">
-                      <img class="" src="https://dummyimage.com/600x700/dee2e6/6c757d.jpg" alt="..." />
+                      <img class="" src= <%=@vehicle.image%>% alt="..." />
                     </div>
                     <div class="p-4">
                         <div class="small mb-1"></div>
@@ -16,9 +16,6 @@
                         <p class="lead"><%=@vehicle.description%></p>
                         <div class="d-flex">
                             <input class="" id="inputQuantity" type="num" value="1" style="max-width: 3rem" />
-                            <button class="btn btn-outline-dark " type="button">
-                                <i class="bi-cart-fill me-1"></i>
-                                Add to cart
                             </button>
                             <%= simple_form_for [@vehicle, @booking] do |f| %>
                          <strong><%= f.input :hours, label: "Enter number of hours you would like to hire"%></strong>
