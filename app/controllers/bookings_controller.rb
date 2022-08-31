@@ -6,12 +6,12 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.vehicle = @vehicle
     @booking.user = current_user
-    @booking.status = "Pending host validation"
-    if @booking.checkout_on && @booking.checkin_on
-      @booking.value = (@booking.checkout_on - @booking.checkin_on).to_f * @booking.vehicle.price.to_f
-    else
-      @booking.value = 0
-    end
+    # # @booking.status = "Pending host validation"
+    # if @booking.checkout_on && @booking.checkin_on
+    #   @booking.value = (@booking.checkout_on - @booking.checkin_on).to_f * @booking.vehicle.price.to_f
+    # else
+    #   @booking.value = 0
+    # end
     if @booking.save
       redirect_to booking_path(@booking)
     else
@@ -31,7 +31,7 @@ class BookingsController < ApplicationController
 
   def update
     set_booking
-    @booking.status = "Pending host validation"
+    # @booking.status = "Pending host validation"
     @booking.save!
     redirect_to booking_path(@booking)
   end
