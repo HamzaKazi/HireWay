@@ -8,26 +8,19 @@
       </div>
       <div class="vehicle-show-card">
         <h3>Email: <%= @booking.user.email %></h3>
-        <h3><% @booking.date do |numbers|%></h3>
-       <%= numbers[0,1]%> / <%= numbers[2,3] %> / <%= numbers[4,5,6,7] %>
-        <% end %>
+        <br>
+        <h3>Date: <% @booking.date %> </h3>
      </div>
     </div>
 
     <div class="col-4">
       <div class="vehicle-show-card">
-
-          <div class="input-group">
-            <span class="input-group-text" id="start-date-label">Booking Date:</span>
-            <input type="text" class="form-control" placeholder= <%= @booking.date%> aria-label="Hours" aria-describedby="start-date-label">
-          </div>
           <br>
                   <h3>Hours: <%= @booking.hours %></h3>
             <br>
             <br>
-          <input type="submit" value="Delete" class="btn btn-success mt-2" style="width: 100%">
 </button>
-      <%= link_to "delete this list", booking_path(@booking), class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %>
+    <button> <%=  link_to "DELETE", booking_path, class: "btn btn-cancel", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this list?" } %> </button>
     </div>
   </div>
 
