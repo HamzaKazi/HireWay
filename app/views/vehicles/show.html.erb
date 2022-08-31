@@ -20,6 +20,10 @@
                                 <i class="bi-cart-fill me-1"></i>
                                 Add to cart
                             </button>
+                            <%= simple_form_for [@vehicle, @booking] do |f| %>
+                         <strong>     <%= f.input :date, label: "Enter number of hours you would like to hire"%></strong>
+                              <%= f.button :submit, "Submit", class: "btn btn-danger btn-lg"%>
+                            <% end %>
                         </div>
                     </div>
                 </div>
