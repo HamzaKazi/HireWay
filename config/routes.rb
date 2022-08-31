@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   resources :vehicles, except: [:edit, :update] do
     resources :pages, only: [:new, :create]
     resources :bookings, only: :create
+    resources :vehicles, :yachts
   end
-  resources :vehicles, only: :destroy
+  resources :vehicles, only: [:destroy, :index, :yachts]
   resources :bookings, only: [:destroy, :index]
   resources :beds, only: [:index, :new, :show]
 end
