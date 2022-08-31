@@ -45,7 +45,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:checkin_on, :checkout_on, :value, :status)
+    params.require(:booking).permit(:date, :hours)
   end
 
   def set_booking

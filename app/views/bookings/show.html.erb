@@ -15,6 +15,24 @@
 
     <div class="col-4">
       <div class="vehicle-show-card">
+          <div class="input-group">
+
+            <span class="input-group-text" id="start-date-label">On:</span>
+            <input type="text" class="form-control" placeholder="12/10/2017" aria-label="start-date" aria-describedby="start-date-label">
+          </div>
+          <div class="input-group mt-2">
+            <span class="input-group-text" id="end-date-label">To:</span>
+            <input type="text" class="form-control" placeholder="18/10/2017" aria-label="end-date" aria-describedby="start-date-label">
+          </div>
+          <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+        </form>
+      </div>
+      <div class="vehicle-show-card">
+        <h3>Details</h3>
+        <div class="flex">
+          <div class="flex">
+            <%= @vehicle.number_of_guests %> people
+          </div>
           <br>
                   <h3>Hours: <%= @booking.hours %></h3>
             <br>
