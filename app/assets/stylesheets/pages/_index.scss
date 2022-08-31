@@ -21,13 +21,14 @@ h2 {
 
 p {
   margin: 0px;
+  font-size: 0.675rem;
 }
 
 .profile-card {
   background: #FFB300;
   width: 56px;
   height: 56px;
-  // position: absolute;
+  position: center;
   // left: 13%;
   // top: 50%;
   z-index: 2;
@@ -46,7 +47,7 @@ p {
 
 .profile-card header {
   width: 179px;
-  height: 280px;
+  height: 200px;
   padding: 40px 20px 30px 20px;
   display: inline-block;
   float: left;
@@ -327,7 +328,7 @@ p {
   }
   100% {
     opacity: 1;
-    margin-top: -20px;
+    margin-top: 4px;
   }
 }
 

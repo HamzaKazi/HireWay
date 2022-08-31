@@ -1,11 +1,9 @@
         <link href="css/styles.css" rel="stylesheet" />
 
-<h2> class="text-center" Start listing with us today! </h2>
-
 <div id="wrapper">
   <div class="row">
     <div class="text-left form-login">
-      <h2 class="text-center"><strong>Add my vehicle </strong></h2>
+      <h1 class="text-center"><strong>Add my vehicle </strong></h1>
       <br>
       <%= simple_form_for @vehicle do |f| %>
       <%= f.error_notification %>
@@ -14,10 +12,6 @@
       <%= f.input :category, label: "Enter vehicle category", placeholder: "Aircraft, car, limousine, yacht" %>
       <%= f.input :price, label: "Enter the price per hour", placeholder: "£250, £1000, £400" %>
       <%= f.input :description, placeholder: "Courtesy of the 4-litre twin-turbo V8 engine, with 600 PS and 800 Nm of torque, you can accelerate from 0 to 62mph in just 3.6 seconds. Agile handling on the road is assured with dynamic all-wheel steering, and RS-air suspension, adjustable in three stages via Audi Drive Select." %>
-
-      <h4><strong>Thank You!</strong> </h4>
-      <br>
-     <br>
       <hr>
       <%= f.button :submit, "Submit", class: "btn btn-danger btn-lg"%>
 
