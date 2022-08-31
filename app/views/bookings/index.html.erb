@@ -6,14 +6,13 @@
     <% @bookings.each do |booking| %>
           <aside class="profile-card">
             <header>
-              <a target="_blank" href="#">
-                <img src=" <%= booking.vehicle.image %> " class="hoverZoomLink">
+              <a target="_blank" href="<%=booking.id%>">
+                <img src=" <%= booking.vehicle.image %> " >
               </a>
-
+                <br>
               <h4>
                     <strong><%= booking.vehicle.name %></strong></p>
                     </h4>
-
               <h2>
               <p>Category: <strong><%= booking.vehicle.category %></strong></p>
                     </h2>

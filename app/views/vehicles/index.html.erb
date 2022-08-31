@@ -22,9 +22,10 @@
            <div class="col">
           <%= link_to  vehicle_path(vehicle) do %>
               <div class="card">
-                <img src= "<%= vehicle.image %>" alt="" class="mx-auto d-block" style="width: 400px; height: 450px;">
+                <img class="card-img-top img-fluid" src= "<%= vehicle.image %>" alt="" class="mx-auto d-block">
                 <div class="card-body">
                   <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
+                  <br>
                   <p>Price: £<%= vehicle.price%> p/hr</p>
                   <br>
                   <a href="" class="btn btn-outline-success btn-sm">More info</a>

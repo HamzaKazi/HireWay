@@ -13,16 +13,20 @@ h2 {
 
 h4 {
   font-size: 24px;
+  margin-top: -10px;
+
 }
 
 h2 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 p {
   margin: 0px;
-  font-size: 0.675rem;
+  font-size: 0.7rem;
+  margin-top: -10px;
 }
+
 
 .profile-card {
   background: #FFB300;
@@ -76,15 +80,15 @@ p {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-top: 350px;
-  margin-left: 250px;
+  margin-left: 350px;
 }
 
 
 .profile-card header a > img {
-  width: 120px;
+  width: auto;
   max-width: 100%;
   -webkit-border-radius: 50%;
-  border-radius: 50%;
+  border-radius: 10%;
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
   -webkit-box-shadow: 0px 0px 0px 8px rgba(0, 0, 0, 0.06);

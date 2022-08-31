@@ -37,6 +37,6 @@ before_action :set_list, only: [:show, :destroy]
 
   def vehicle_params
     #TODO
-		params.require(:vehicle).permit(:name, :description, :category, :price)
+		params.require(:vehicle).permit(:name, :description, :category, :price, :image)
   end
 end
