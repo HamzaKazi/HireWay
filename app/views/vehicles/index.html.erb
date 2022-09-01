@@ -30,7 +30,7 @@
            <div class="col">
           <%= link_to  vehicle_path(vehicle) do %>
               <div class="card">
-                <img class="card-img-top img-fluid" src= "<%= vehicle.image %>" alt="" class="mx-auto d-block">
+                <img class="card-img-top img-fluid" src= "<%= vehicle.image.key %>" alt="" class="mx-auto d-block">
                 <div class="card-body">
                   <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
                   <br>
@@ -47,4 +47,4 @@
   </div>
 </section>
 <%# <%= cl_image_tag("sxheg955syqgeeu5qflo",
-      width: 400, height: 300, crop: :fill) %> %>
+      width: 400, height: 300, crop: :fill) %>

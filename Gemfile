@@ -5,7 +5,7 @@ ruby "3.1.2"
 
  #Gemfile
 gem "cloudinary"
-gem "dotenv-rails", groups: [:development, :test]
+# gem "dotenv-rails", groups: [:development, :test]
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.3", ">= 7.0.3.1"
