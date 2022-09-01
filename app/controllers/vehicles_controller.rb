@@ -3,6 +3,14 @@ before_action :set_list, only: [:show, :destroy]
 
   def index
     @vehicles = Vehicle.all
+    @markers = @vehicles.geocoded.map do |vehicle|
+      {
+        lat: vehicle.latitude,
+        lng: vehicle.longitude,
+        info_window: render_to_string(partial: "info_window", locals: {vehicle: vehicle}),
+        image_url: helpers.asset_url("8150.png")
+      }
+    end
   end
 
 

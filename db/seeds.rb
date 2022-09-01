@@ -58,7 +58,8 @@ bmw = Vehicle.create(
   category: "Car",
   user_id: user.id,
   image: "https://elitetraveler.com/wp-content/uploads/sites/8/2022/05/Phantom-Series-II_Platino_2-min-700x467.jpg",
-  price: 200
+  price: 200,
+  address: "Mayfair",
 )
 bmw = Vehicle.create(
   name: "Porsche Taycan",
@@ -66,7 +67,8 @@ bmw = Vehicle.create(
   category: "Car",
   user_id: user.id,
   image: "https://vezess2.p3k.hu/app/uploads/2022/01/mercedes-vision-eqxx-4-700x467.jpg",
-  price: 200
+  price: 200,
+  address: "Soho"
 )
 bmw = Vehicle.create(
   name: "Aurora",
@@ -74,7 +76,8 @@ bmw = Vehicle.create(
   category: "Yacht",
   image: "https://marvel-b1-cdn.bc0a.com/f00000000235903/www.galatiyachts.com/wp-content/uploads/2018/08/y85-exterior-700x467.jpeg",
   user_id: user.id,
-  price: 250
+  price: 250,
+  address: "Hoxton"
 )
 bmw = Vehicle.create(
   name: "Escape",
@@ -82,7 +85,8 @@ bmw = Vehicle.create(
   category: "Yacht",
   image: "https://images.unsplash.com/photo-1621277224630-81d9af65e40c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
   user_id: user.id,
-  price: 400
+  price: 400,
+  address: "Kennington, London"
 )
 # bmw = Vehicle.create(
 #   name: "My Way",
@@ -98,7 +102,8 @@ bmw = Vehicle.create(
   category: "Yacht",
   image: "https://marvel-b1-cdn.bc0a.com/f00000000235903/www.galatiyachts.com/wp-content/uploads/82-Viking_Starboard-Profile2-700x467.jpg",
   user_id: 2,
-  price: 999
+  price: 999,
+  address: "Islington, London"
 )
 # bmw = Vehicle.create(
 #   name: "Waver",
