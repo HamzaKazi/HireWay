@@ -11,46 +11,60 @@
   </div>
 </section> %>
 
-<section id="header" class="jumbotron text-center">
-<%= form_with url: vehicles_path, method: :get, class: "d-flex" do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a movie"
-  %>
-  <%= submit_tag "Search", class: "btn btn-primary" %>
-<% end %>
-     <h1 class="display-3">Luxury Vehicles</h1>
-     <p class="lead">Discover luxury vehicles below and hire the car / boat of your dreams.</p>
-</section>
-<section id="gallery">
-  <div class="container">
-    <div class="row">
-        <% @vehicles.each do |vehicle| %>
-        <%# <% if vehicle.category == "Yacht" then%>
-           <div class="col">
-          <%= link_to  vehicle_path(vehicle) do %>
-              <div class="card">
-                <img class="card-img-top img-fluid" src= "<%= vehicle.image %>" alt="" class="mx-auto d-block">
-                <div class="card-body">
-                  <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
-                  <br>
-                  <p>Price: £<%= vehicle.price%> p/hr</p>
-                  <br>
-                  <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+<%# <div> %>
+  <section id="header" class="jumbotron text-center">
+  <%= form_with url: vehicles_path, method: :get, class: "d-flex" do %>
+    <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a movie"
+    %>
+    <%= submit_tag "Search", class: "btn btn-primary" %>
+  <% end %>
+  <br>
+      <h1 class="display-3">Luxury Vehicles</h1>
+      <p class="lead">Discover luxury vehicles below and hire the car / boat of your dreams.</p>
+  </section>
+<%# </div> %>
+
+<%# <div class ="split left"> %>
+  <section id="gallery">
+    <div class="container">
+      <div class="row" style="width: 100%;">
+          <% @vehicles.each do |vehicle| %>
+          <%# <% if vehicle.category == "Yacht" then%>
+             <div class="col">
+            <%= link_to  vehicle_path(vehicle) do %>
+                <div class="card" style="width: 20rem;">
+                  <img class="card-img-top img-fluid" src= "<%= vehicle.image %>" alt="" class="mx-auto d-block">
+                  <div class="card-body">
+                    <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
+                    <p class="card-price" style="color:black;">Price: £<%= vehicle.price%> p/hr</p>
+                    <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+                  </div>
                 </div>
-              </div>
-          <%# <% end %>
+            <%# <% end %>
+            <% end %>
+            </div>
           <% end %>
-           </div>
-        <% end %>
+        </div>
+    </div>
+  </section>
+<%# </div> %>
+
+<br>
+<br>
+
+<%# <div class ="split right"> %>
+
         <div style="width: 100%; height: 600px;"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-      </div>
-  </div>
-</section>
+        <br>
+        <br>
+
+<%# </div> %>
 <%# <%= cl_image_tag("sxheg955syqgeeu5qflo",
-      width: 400, height: 300, crop: :fill) %> %>
+      width: 400, height: 300, crop: :fill) %>

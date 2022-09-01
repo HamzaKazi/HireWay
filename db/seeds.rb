@@ -101,34 +101,34 @@ bmw = Vehicle.create(
   description: "Follow the path of the TOP G and live his life for a few moments...",
   category: "Yacht",
   image: "https://marvel-b1-cdn.bc0a.com/f00000000235903/www.galatiyachts.com/wp-content/uploads/82-Viking_Starboard-Profile2-700x467.jpg",
-  user_id: 2,
+  user_id: user.id,
   price: 999,
   address: "Islington, London"
 )
-# bmw = Vehicle.create(
-#   name: "Waver",
-#   description: "Yachts are usually large enough to have some form of sleeping quarters (cabin) on board for overnight trips as well as a kitchen (galley) and a bathroom (head). They are also large enough that they require more than human inputs (i.e rowing) to propel forward.",
-#   category: "Yacht",
-#   image: "https://boatstersblack.com/wp-content/uploads/2021/02/IMG_0268-700x467.jpg",
-#   user_id: 2,
-#   price: 300
-# )
-# bmw = Vehicle.create(
-#   name: "Titanic II",
-#   description: "a yacht that includes high-end finishes and features and the latest in modern performance technology. The term ‘luxury’ can precede any type of yacht, i.e. “luxury motor yacht”, “luxury sailing yacht”, etc.",
-#   category: "Yacht",
-#   image: "https://culturecdn.fra1.cdn.digitaloceanspaces.com/2015/01/Bavaria-Sport-400-HT-700x467.jpg",
-#   user_id: 2,
-#   price: 650
-# )
-# bmw = Vehicle.create(
-#   name: "SuperYacht",
-#   description: " a popular yacht style with deck space above the hull and living quarters below. The living quarters of a sedan yacht are enclosed and single-level.",
-#   category: "Yacht",
-#   image: "https://wp-media-yotlot.s3.amazonaws.com/wp-content/uploads/2021/11/16172803/Featured-Image-Master-V3-4-700x467.jpg",
-#   user_id: 2,
-#   price: 700
-# )
+bmw = Vehicle.create(
+  name: "Waver",
+  description: "Yachts are usually large enough to have some form of sleeping quarters (cabin) on board for overnight trips as well as a kitchen (galley) and a bathroom (head). They are also large enough that they require more than human inputs (i.e rowing) to propel forward.",
+  category: "Yacht",
+  image: "https://boatstersblack.com/wp-content/uploads/2021/02/IMG_0268-700x467.jpg",
+  user_id: user.id,
+  price: 300
+)
+bmw = Vehicle.create(
+  name: "Titanic II",
+  description: "a yacht that includes high-end finishes and features and the latest in modern performance technology. The term ‘luxury’ can precede any type of yacht, i.e. “luxury motor yacht”, “luxury sailing yacht”, etc.",
+  category: "Yacht",
+  image: "https://culturecdn.fra1.cdn.digitaloceanspaces.com/2015/01/Bavaria-Sport-400-HT-700x467.jpg",
+  user_id: user.id,
+  price: 650
+)
+bmw = Vehicle.create(
+  name: "SuperYacht",
+  description: " a popular yacht style with deck space above the hull and living quarters below. The living quarters of a sedan yacht are enclosed and single-level.",
+  category: "Yacht",
+  image: "https://wp-media-yotlot.s3.amazonaws.com/wp-content/uploads/2021/11/16172803/Featured-Image-Master-V3-4-700x467.jpg",
+  user_id: user.id,
+  price: 700
+)
 booking = Booking.create!(
   date: 10102022,
   user_id: user.id,
