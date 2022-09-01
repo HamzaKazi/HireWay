@@ -59,7 +59,7 @@ bmw = Vehicle.create(
   user_id: user.id,
   image: "https://elitetraveler.com/wp-content/uploads/sites/8/2022/05/Phantom-Series-II_Platino_2-min-700x467.jpg",
   price: 200,
-  address: "Mayfair",
+  address: "Mayfair"
 )
 bmw = Vehicle.create(
   name: "Porsche Taycan",

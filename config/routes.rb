@@ -10,6 +10,6 @@ Rails.application.routes.draw do
     resources :vehicles, :yachts
   end
   resources :vehicles, only: [:destroy, :index, :yachts]
-  resources :bookings, only: [:destroy, :index, :show]
+  resources :bookings, only: [:destroy, :index, :show, :mylistings]
   resources :beds, only: [:index, :new, :show]
 end
