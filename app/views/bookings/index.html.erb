@@ -7,7 +7,7 @@
           <aside class="profile-card">
             <header>
               <a target="_blank" href="<%=booking.id%>">
-                <img src=" <%= booking.vehicle.image %> " >
+                <%= cl_image_tag booking.vehicle.image.key %>
               </a>
                 <br>
                 <br>
