@@ -4,7 +4,7 @@
             <div class="">
                 <div class="d-flex  mx-4 mt-4">
                     <div class="">
-                      <img class="" src= <%=@vehicle.image%> alt="..." />
+                      <%= cl_image_tag @vehicle.image.key, height: 300, width: 400, crop: :fill, style: 'object-fit: fit'%>
                     </div>
                     <div class="p-4">
                         <div class="small mb-1"></div>

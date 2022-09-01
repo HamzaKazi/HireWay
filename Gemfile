@@ -5,7 +5,7 @@ ruby "3.1.2"
 
  #Gemfile
 gem "cloudinary"
-gem "dotenv-rails", groups: [:development, :test]
+# gem "dotenv-rails", groups: [:development, :test]
 
 #Geocode
 gem "geocoder"
