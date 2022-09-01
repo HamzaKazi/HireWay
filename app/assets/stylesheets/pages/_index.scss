@@ -5,6 +5,12 @@ html {
   height: 100%;
 }
 
+div.marker:hover {
+  height: 70px;
+  width: 70px;
+  background-size: cover;
+}
+
 h4,
 h2 {
   font-weight: 500;

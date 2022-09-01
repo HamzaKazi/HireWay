@@ -86,7 +86,7 @@ bmw = Vehicle.create(
   image: "https://images.unsplash.com/photo-1621277224630-81d9af65e40c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=700&q=60",
   user_id: user.id,
   price: 400,
-  address: "Kennington, London"
+  address: "Cornwall"
 )
 # bmw = Vehicle.create(
 #   name: "My Way",
