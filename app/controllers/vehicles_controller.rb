@@ -50,6 +50,6 @@ end
 
   def vehicle_params
     #TODO
-		params.require(:vehicle).permit(:name, :description, :category, :price, :image)
+		params.require(:vehicle).permit(:name, :description, :category, :price, :image, :address)
   end
 end
