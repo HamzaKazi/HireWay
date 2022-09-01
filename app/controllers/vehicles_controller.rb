@@ -42,6 +42,9 @@ end
     redirect_to vehicles_path, status: :see_other
   end
 
+  def mylistings
+    @vehicles = Vehicle.where(user: current_user)
+  end
   private
 
   def set_list

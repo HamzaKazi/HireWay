@@ -44,10 +44,6 @@ class BookingsController < ApplicationController
     redirect_to root_path, status: :see_other
   end
 
-  def mylistings
-    set_booking
-    @vehicle = @booking.vehicle
-  end
 
   private
 
