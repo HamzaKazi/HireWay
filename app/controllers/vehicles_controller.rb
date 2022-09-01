@@ -1,9 +1,14 @@
 class VehiclesController < ApplicationController
 before_action :set_list, only: [:show, :destroy]
 
-  def index
+def index
+  if params[:query].present?
+    sql_query = "name ILIKE :query OR description ILIKE :query"
+    @vehicles = Vehicle.where(sql_query, query: "%#{params[:query]}%")
+  else
     @vehicles = Vehicle.all
   end
+end
 
 
   def show
