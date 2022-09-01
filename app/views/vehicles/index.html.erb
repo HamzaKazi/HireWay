@@ -16,7 +16,7 @@
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
-    placeholder: "Find a movie"
+    placeholder: "Find a vehicle"
   %>
   <%= submit_tag "Search", class: "btn btn-primary" %>
 <% end %>
@@ -31,7 +31,8 @@
            <div class="col">
           <%= link_to  vehicle_path(vehicle) do %>
               <div class="card">
-                <img class="card-img-top img-fluid" src= "<%= vehicle.image.key %>" alt="" class="mx-auto d-block">
+                <%# <img class="card-img-top img-fluid" src="" alt="" class="mx-auto d-block"> %>
+                <%=cl_image_tag vehicle.image.key, class: "mx-auto d-block card-img-top img-fluid" %>
                 <div class="card-body">
                   <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
                   <br>
