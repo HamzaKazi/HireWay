@@ -7,4 +7,16 @@ class Vehicle < ApplicationRecord
     in: %w(Car Limosuine Aircraft Yacht),
     message: 'must be either Car Limosuine Aircraft or Yacht'
   }
+
+  include PgSearch::Model
+
+  pg_search_scope :global_search,
+  against: [ :name, :description ],
+  associated_against: {
+    director: [ :name, :description ]
+  },
+  using: {
+    tsearch: { prefix: true }
+  }
+
 end
