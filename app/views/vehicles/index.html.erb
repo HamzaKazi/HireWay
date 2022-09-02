@@ -38,11 +38,8 @@
                    <%# <img class="card-img-top img-fluid" src="" alt="" class="mx-auto d-block"> %>
                      <%=cl_image_tag vehicle.image.key, class: "mx-auto d-block card-img-top img-fluid" %>
                   <div class="card-body">
-                  <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
-                  <br>
-                  <p>Price: £<%= vehicle.price%> p/hr</p>
-                  <br>
-                  <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
+                    <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
+                    <p class="card-price" style="color:black;">Price: £<%= vehicle.price%> p/hr</p>
                   </div>
                 </div>
             <%# <% end %>
@@ -53,20 +50,14 @@
     </div>
   </section>
 <%# </div> %>
-
-<br>
-<br>
-
 <%# <div class ="split right"> %>
-
+<div class="map">
         <div style="width: 100%; height: 600px;"
           data-controller="map"
            data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-        <br>
-        <br>
-
+</div>
 <%# </div> %>
 <%# <%= cl_image_tag("sxheg955syqgeeu5qflo",
       width: 400, height: 300, crop: :fill) %>

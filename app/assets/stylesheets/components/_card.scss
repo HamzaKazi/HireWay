@@ -4,6 +4,10 @@
 
 #gallery {
   background: url(https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80) center center / cover no-repeat ;
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
 }
 
 .col {
@@ -18,8 +22,8 @@
 .card {
   margin: 10px;
   position: relative;
-  max-width: 300px;
-  max-height: 350px;
+  max-width: 200px;
+  max-height: 250px;
 }
 
 .card:hover {
@@ -41,6 +45,18 @@
   font-weight: bold;
   font-size: 1.2em;
 }
+
+.map {
+  float: right;
+  width: 50%;
+  background: url(https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80) center center / cover no-repeat ;
+  height: 100%;
+  overflow: scroll;
+}
+
+// .card-body {
+// }
+
 
 // /* Split the screen in half */
 // .split {
