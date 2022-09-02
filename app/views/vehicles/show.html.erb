@@ -4,22 +4,27 @@
             <div class="">
                 <div class="d-flex  mx-4 mt-4">
                     <div class="">
-                      <img class="" src= <%=@vehicle.image%> alt="..." />
+                      <%= cl_image_tag @vehicle.image.key, height: 300, width: 400, crop: :fill, style: 'object-fit: fit'%>
                     </div>
                     <div class="p-4">
                         <div class="small mb-1"></div>
                         <h1 class=""><%= @vehicle.name %></h1>
+                           <div class="row" style="margin-top: 2%;">
                         <div class="">
                             <span class="text-decoration-line-through"></span>
                             <span>$<%=@vehicle.price%>/per hour</span>
                         </div>
+                           <div class="row" style="margin-top: 5%;">
                         <p class="lead"><%=@vehicle.description%></p>
                         <div class="d-flex">
+
+                           <div class="row" style="margin-top: 5%;">
 
                             <%= simple_form_for [@vehicle, @booking] do |f| %>
                          <strong><%= f.input :hours, label: "Enter number of hours you would like to hire"%></strong>
                          <strong><%= f.input :date, as: :date, label: "Enter the date"%></strong>
-                              <%= f.button :submit, "Submit", class: "btn btn-danger btn-lg"%>
+                              <div class="row" style="width:400px;font-size:13pt;padding:2px; border:3px solid green">
+                              <%= f.button :submit, "Submit", class: "btn btn-green btn-lg"%>
                             <% end %>
                         </div>
                         <%# <div style="width: 100%; height: 600px;"

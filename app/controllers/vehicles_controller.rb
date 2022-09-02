@@ -1,7 +1,11 @@
 class VehiclesController < ApplicationController
 before_action :set_list, only: [:show, :destroy]
 
-  def index
+def index
+  if params[:query].present?
+    sql_query = "name ILIKE :query OR description ILIKE :query"
+    @vehicles = Vehicle.where(sql_query, query: "%#{params[:query]}%")
+  else
     @vehicles = Vehicle.all
     @markers = @vehicles.geocoded.map do |vehicle|
       if vehicle.category == "Yacht"
@@ -19,6 +23,7 @@ before_action :set_list, only: [:show, :destroy]
       }
     end
   end
+end
 
 
   def show
@@ -44,6 +49,9 @@ before_action :set_list, only: [:show, :destroy]
     redirect_to vehicles_path, status: :see_other
   end
 
+  def mylistings
+    @vehicles = Vehicle.where(user: current_user)
+  end
   private
 
   def set_list
@@ -52,6 +60,6 @@ before_action :set_list, only: [:show, :destroy]
 
   def vehicle_params
     #TODO
-		params.require(:vehicle).permit(:name, :description, :category, :price, :image)
+		params.require(:vehicle).permit(:name, :description, :category, :price, :image, :address)
   end
 end
