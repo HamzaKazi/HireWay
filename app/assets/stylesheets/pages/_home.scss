@@ -155,6 +155,7 @@
 h2 {
   font-weight: bold;
   font-size: 12rem;
+  text-align: center;
 }
 
 .mb-0 {
@@ -166,4 +167,40 @@ h1, .h1 {
   font-size: 75px;
   font-family: Garamond, serif;
   font-weight:  lighter;
+}
+
+body{
+  background: #eee;
+}
+span{
+  font-size:15px;
+}
+a{
+text-decoration:none;
+color: #0062cc;
+
+}
+.box{
+  margin-left: 410px;
+  margin-right: 350px;
+  display: center;
+  width: 75rem;
+}
+
+.box-part{
+  background:#FFF;
+  border-radius:10px;
+  padding:60px 10px;
+  margin:30px 0px;
+}
+.text{
+  margin:20px 0px;
+}
+
+.fa{
+   color:#4183D7;
+}
+
+h4 {
+  text-align: center;
 }
