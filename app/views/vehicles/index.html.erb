@@ -10,14 +10,13 @@
     <%# </div>
   </div>
 </section> %>
-
 <%# <div> %>
   <section id="header" class="jumbotron text-center">
   <%= form_with url: vehicles_path, method: :get, class: "d-flex" do %>
     <%= text_field_tag :query,
       params[:query],
       class: "form-control",
-      placeholder: "Find a movie"
+      placeholder: "Find a vehicle"
     %>
     <%= submit_tag "Search", class: "btn btn-primary" %>
   <% end %>
@@ -36,7 +35,8 @@
              <div class="col">
             <%= link_to  vehicle_path(vehicle) do %>
                 <div class="card" style="width: 20rem;">
-                  <img class="card-img-top img-fluid" src= "<%= vehicle.image %>" alt="" class="mx-auto d-block">
+                   <%# <img class="card-img-top img-fluid" src="" alt="" class="mx-auto d-block"> %>
+                     <%=cl_image_tag vehicle.image.key, class: "mx-auto d-block card-img-top img-fluid" %>
                   <div class="card-body">
                     <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
                     <p class="card-price" style="color:black;">Price: £<%= vehicle.price%> p/hr</p>
@@ -54,7 +54,7 @@
 <div class="map">
         <div style="width: 100%; height: 600px;"
           data-controller="map"
-          data-map-markers-value="<%= @markers.to_json %>"
+           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
 </div>
