@@ -45,7 +45,7 @@
 .lead {
   font-size: 1.45rem;
   font-weight: 200;
-  font-family: Garamond, serif;
+  font-family: 'Vollkorn', serif;
 
 }
 
@@ -159,14 +159,13 @@ h2 {
 }
 
 .mb-0 {
-  font-family: 'Lora', serif;
+  font-family: 'Vollkorn', serif;
 
 }
 
 h1, .h1 {
   font-size: 75px;
-  font-family: Garamond, serif;
-  font-weight:  lighter;
+  font-family: 'Cinzel', serif;
 }
 
 body{
@@ -178,23 +177,22 @@ span{
 a{
 text-decoration:none;
 color: #0062cc;
+font-family: 'Vollkorn', serif;
 
 }
 .box{
-  margin-left: 410px;
-  margin-right: 350px;
   display: center;
-  width: 75rem;
 }
 
 .box-part{
-  background:#FFF;
+  background: #BAC6CF;
   border-radius:10px;
   padding:60px 10px;
   margin:30px 0px;
 }
 .text{
   margin:20px 0px;
+  font-family: 'Vollkorn', serif;
 }
 
 .fa{
@@ -203,4 +201,5 @@ color: #0062cc;
 
 h4 {
   text-align: center;
+  font-family: 'Vollkorn', serif;
 }
