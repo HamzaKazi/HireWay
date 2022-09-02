@@ -42,6 +42,9 @@ end
     redirect_to vehicles_path, status: :see_other
   end
 
+  def mylistings
+    @vehicles = Vehicle.where(user: current_user)
+  end
   private
 
   def set_list
@@ -50,6 +53,6 @@ end
 
   def vehicle_params
     #TODO
-		params.require(:vehicle).permit(:name, :description, :category, :price, :image)
+		params.require(:vehicle).permit(:name, :description, :category, :price, :image, :address)
   end
 end

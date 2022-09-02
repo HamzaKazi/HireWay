@@ -60,8 +60,20 @@
       <div class="row" style="margin-top: 2%;">
 
           <div class="col-md-4 form-group">
+         <%= f.input :address, label: "Enter your address", placeholder: "Mayfair, Soho..." %>
+          </div>
+
+      <div class="row" style="margin-top: 2%;">
+
+          <div class="col-md-4 form-group">
           <%= f.input :description, placeholder: "Courtesy of the 4-litre twin-turbo V8 engine, with 600 PS and 800 Nm of torque, you can accelerate from 0 to 62mph in just 3.6 seconds. Agile handling on the road is assured with dynamic all-wheel steering, and RS-air suspension, adjustable in three stages via Audi Drive Select." %>
           </div>
+
+          <%# IMAGES FOLDER %>
+
+            <%= f.input :image, as: :file %>
+
+
 
           <div class="row" style="margin-top: 2%;">
 
