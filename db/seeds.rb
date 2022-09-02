@@ -109,6 +109,7 @@ bmw = Vehicle.create(
 bmw.image.attach(io: file, filename: "nes.png", content_type: "image/png")
 bmw.save
 # bmw = Vehicle.create(
+
   #   name: "My Way",
   #   description: "Whether you prefer the Frank Sinatra original or the Sex Pistols cover, there is no denying the cultural impact of this classic tune.",
   #   category: "Yacht",
@@ -153,6 +154,7 @@ bmw.save
 #   user_id: 2,
 #   price: 700
 # )
+
 booking = Booking.create!(
   date: 10102022,
   user_id: user.id,
