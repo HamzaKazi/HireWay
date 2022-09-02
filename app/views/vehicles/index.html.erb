@@ -40,7 +40,6 @@
                   <div class="card-body">
                     <h5 class="card-title" style="color:black;"><%= vehicle.name%></h5>
                     <p class="card-price" style="color:black;">Price: £<%= vehicle.price%> p/hr</p>
-                    <a href="" class="btn btn-outline-danger btn-sm"><i class="far fa-heart"></i></a>
                   </div>
                 </div>
             <%# <% end %>
@@ -51,20 +50,14 @@
     </div>
   </section>
 <%# </div> %>
-
-<br>
-<br>
-
 <%# <div class ="split right"> %>
-
+<div class="map">
         <div style="width: 100%; height: 600px;"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
         </div>
-        <br>
-        <br>
-
+</div>
 <%# </div> %>
 <%# <%= cl_image_tag("sxheg955syqgeeu5qflo",
       width: 400, height: 300, crop: :fill) %>
