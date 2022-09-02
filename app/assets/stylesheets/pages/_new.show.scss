@@ -122,3 +122,13 @@ footer a {
     color: #3c97bf;
     text-decoration: none;
 }
+.btn-primary {
+  color: #fff;
+  background-color: #0495c9;
+  border-color: #357ebd; /*set the color you want here*/
+}
+.btn-primary:hover{
+  color: #fff;
+  background-color: #37db00;
+  border-color: #1dae2e; /*set the color you want here*/
+}
