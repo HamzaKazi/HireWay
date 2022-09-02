@@ -7,7 +7,14 @@
   float: left;
   width: 50%;
   height: 100%;
-  overflow-y: scroll;
+}
+
+.display-3 {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+.lead {
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
 .col {
@@ -49,9 +56,11 @@
 .map {
   float: right;
   width: 50%;
+  height: auto;
   background: url(https://images.unsplash.com/photo-1566041510394-cf7c8fe21800?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80) center center / cover no-repeat ;
-  height: 100%;
-  overflow: scroll;
+  position: absolute;
+  margin-left:50%;
+  border-radius: 20px;
 }
 
 // .card-body {
