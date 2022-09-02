@@ -48,6 +48,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_111914) do
     t.bigint "vehicle_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "hours"
     t.index ["user_id"], name: "index_bookings_on_user_id"
     t.index ["vehicle_id"], name: "index_bookings_on_vehicle_id"
   end
@@ -72,6 +73,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_09_01_111914) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "price"
+    t.string "image"
+    t.float "latitude"
+    t.float "longitude"
+    t.string "address"
     t.index ["user_id"], name: "index_vehicles_on_user_id"
   end
 
