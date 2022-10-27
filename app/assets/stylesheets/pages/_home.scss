@@ -45,7 +45,7 @@
 .lead {
   font-size: 1.45rem;
   font-weight: 200;
-  font-family: Garamond, serif;
+  font-family: 'Vollkorn', serif;
 
 }
 
@@ -181,25 +181,19 @@ span{
 a{
 text-decoration:none;
 color: #5f6c7b;
-
 }
 .box{
-  margin-left: 410px;
-  margin-right: 350px;
   display: center;
-  width: 75rem;
 }
 
 .box-part{
   background: #bac6cf;
-  border-radius:10px;
-  padding:60px 10px;
-  margin:30px 0px;
 
 }
 .text{
   margin:20px 0px;
   color: #5f6c7b;
+
 }
 
 .fa{
@@ -215,4 +209,7 @@ h4 {
 .bg-light {
   --bs-bg-opacity: 1;
   background-color: red ;
+
+  font-family: 'Vollkorn', serif;
+
 }
