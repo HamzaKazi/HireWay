@@ -156,10 +156,12 @@ h2 {
   font-weight: bold;
   font-size: 12rem;
   text-align: center;
+  color: #ffffff;
 }
 
 .mb-0 {
   font-family: 'Lora', serif;
+  color: #ffffff;
 
 }
 
@@ -167,17 +169,18 @@ h1, .h1 {
   font-size: 75px;
   font-family: Garamond, serif;
   font-weight:  lighter;
+  color: #094067;
 }
 
 body{
-  background: #eee;
+  background: #fffffe;
 }
 span{
   font-size:15px;
 }
 a{
 text-decoration:none;
-color: #0062cc;
+color: #5f6c7b;
 
 }
 .box{
@@ -188,19 +191,28 @@ color: #0062cc;
 }
 
 .box-part{
-  background:#FFF;
+  background: #bac6cf;
   border-radius:10px;
   padding:60px 10px;
   margin:30px 0px;
+
 }
 .text{
   margin:20px 0px;
+  color: #5f6c7b;
 }
 
 .fa{
-   color:#4183D7;
+  color: #5f6c7b;
 }
 
 h4 {
   text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: red ;
 }
