@@ -156,50 +156,60 @@ h2 {
   font-weight: bold;
   font-size: 12rem;
   text-align: center;
+  color: #ffffff;
 }
 
 .mb-0 {
-  font-family: 'Vollkorn', serif;
+  font-family: 'Lora', serif;
+  color: #ffffff;
 
 }
 
 h1, .h1 {
   font-size: 75px;
-  font-family: 'Cinzel', serif;
+  font-family: Garamond, serif;
+  font-weight:  lighter;
+  color: #094067;
 }
 
 body{
-  background: #eee;
+  background: #fffffe;
 }
 span{
   font-size:15px;
 }
 a{
 text-decoration:none;
-color: #0062cc;
-font-family: 'Vollkorn', serif;
-
+color: #5f6c7b;
 }
 .box{
   display: center;
 }
 
 .box-part{
-  background: #BAC6CF;
-  border-radius:10px;
-  padding:60px 10px;
-  margin:30px 0px;
+  background: #bac6cf;
+
 }
 .text{
   margin:20px 0px;
-  font-family: 'Vollkorn', serif;
+  color: #5f6c7b;
+
 }
 
 .fa{
-   color:#4183D7;
+  color: #5f6c7b;
 }
 
 h4 {
   text-align: center;
+  color: hsl(0, 0%, 100%);
+}
+
+
+.bg-light {
+  --bs-bg-opacity: 1;
+  background-color: red ;
+
   font-family: 'Vollkorn', serif;
+
 }
